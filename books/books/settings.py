@@ -101,3 +101,7 @@ USERAGENTS = [
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+# Connect the web scraping framework to a database
+MONGO_URI = "mongodb://localhost:27017"
+MONGO_DATABASE = "books_db"
