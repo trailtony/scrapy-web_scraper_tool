@@ -65,7 +65,7 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "books.pipelines.MongoPipeline": 300,
+    "books.pipelines.MongoPipeline": 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -103,5 +103,9 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 # Connect the web scraping framework to a database
-MONGO_URI = "mongodb://localhost:27017"
+MONGO_URI = "mongodb://127.0.0.1:27017"
 MONGO_DATABASE = "books_db"
+
+
+LOG_LEVEL = "DEBUG"
+LOG_FILE = "book_scrapper.log"

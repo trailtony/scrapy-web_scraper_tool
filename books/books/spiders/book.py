@@ -19,6 +19,7 @@ class BookSpider(scrapy.Spider):
         if next_page:
             # concatenate the next page's url to the website base domain
             next_page_url = response.urljoin(next_page)
+            self.logger.info(f"Navigating to the next page with URL {next_page_url}.")
             # yields a scrapy.Request object, passing it the URL.
             # makes a recursive request to the next using the .parse() method
             yield scrapy.Request(url=next_page_url, callback=self.parse)
